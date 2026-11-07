@@ -3,63 +3,128 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #eef4ff;
-    color: #172554;
+    background: #080e1c;
+    color: white;
 }
 
 header {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    color: white;
-    text-align: center;
-    padding: 40px;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0b1427;
 }
 
-nav {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 3px 10px #0001;
+.logo {
+    font-size: 25px;
+    color: white;
+}
+
+.logo span {
+    color: #00e5ff;
 }
 
 nav a {
-    color: #1e40af;
+    color: white;
     text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
+    margin-left: 25px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #60a5fa;
+    color: #00e5ff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #080e1c, #102b50);
 }
 
 .content {
-    text-align: center;
-    padding: 100px 20px;
+    max-width: 650px;
+}
+
+.content h3 {
+    color: #00e5ff;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
 .content h1 {
-    font-size: 42px;
+    font-size: 45px;
     margin-bottom: 20px;
 }
 
+.content h1 span {
+    color: #00e5ff;
+}
+
 .content p {
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #c5d3e8;
+    margin-bottom: 30px;
 }
 
-button {
-    background: #2563eb;
-    color: white;
-    padding: 15px 35px;
-    border: none;
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: #00e5ff;
+    color: #08101f;
+    text-decoration: none;
     border-radius: 30px;
-    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: #1e3a8a;
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.about, .contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.about h2, .contact h2 {
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
+
+.about p, .contact p {
+    color: #c5d3e8;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b1427;
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .content h1 {
+        font-size: 32px;
+    }
 }
